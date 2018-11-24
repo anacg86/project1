@@ -1,0 +1,36 @@
+.jumbotron {
+    padding: 10rem 2rem;
+    
+}
+
+body {
+    background-image: url("../images/back.png");
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+.bg {
+    background-color: #ffbc00;
+    color: #ffffff;
+}
+
+.navbar-light .navbar-brand {
+    color: #ffffff;
+    font-weight: bold;
+}
+a:not([href]):not([tabindex]) {
+    color: #ffffff;
+}
+
+.display {
+    text-align: center;
+    font-size: 45px;
+}
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
