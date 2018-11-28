@@ -22,6 +22,7 @@ function validateInputs(eventInfo) {
         }
     });
     if (areInputsValid) {
+        saveToSessionStorage("userInfo", userInfo);
         $("#clientsForm").hide();
         $(".food-preferences-container").show();
         buildMealSelects();
