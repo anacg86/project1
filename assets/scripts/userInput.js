@@ -1,31 +1,36 @@
-//user input
+var userInfo = {
+    get: function(key) {
+        return this[key];
+    }
+};
+
 $(document).ready(function () {
     $("#nextButton").click(validateInputs);
 });
+
 
 function validateInputs(eventInfo) {
     eventInfo.preventDefault();
     var areInputsValid = true;
     //check if inputs are empty if they are, red flag
-    $("input").each((index, input) => {
+    $("#clientsForm input").each((index, input) => {
         var inputValue = $(input).val().trim();
+        userInfo[input.name] = inputValue;
         if (!inputValue) {
             $(input).css('border', 'solid 5px red');
             areInputsValid = false;
         }
     });
     if (areInputsValid) {
-        calculateCalories();
+        $("#clientsForm").hide();
+        $(".food-preferences-container").show();
+        buildMealSelects();
     };
+}
 
-//con la formula mia comparo la data del input 
-//peso por 22
-//formula para calcular las calorias
-function calculateCalories () {
-    var weight = $("#weightData").val();
-    var totalCalories = weight * 22; 
-    console.log("Your total calorie intake is: " + totalCalories + "kcal");
-};
-
-// ajax
-//traer la informacion basada en la comparacion de la formula 
+/*
+//view of page 
+//first show inputs
+//click next show checkboxes
+//click done show results (1 highcharts, 2 recipe, 3 video playlist on youtube, 4 recommendations)
+*/
