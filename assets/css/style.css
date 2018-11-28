@@ -1,29 +1,25 @@
-.jumbotron {
-    padding: 10rem 2rem;
-    
-}
-
 body {
     background-image: url("../images/back.png");
     font-family: Arial, Helvetica, sans-serif; 
 }
 
-.bg {
-    background-color: #ffbc00;
-    color: #ffffff;
+.navbar {
+    background-color: #333333;
+    height: 70px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.navbar-light .navbar-brand {
-    color: #ffffff;
-    font-weight: bold;
-}
-a:not([href]):not([tabindex]) {
-    color: #ffffff;
+.navbar-brand {
+    z-index: 2;
+    position: relative;
+    top: 2rem;
+    margin-left: 8%;
 }
 
-.display {
-    text-align: center;
-    font-size: 45px;
+.navbar-brand img {
+    width: 128px;
 }
 
 .card-columns {
@@ -34,3 +30,86 @@ a:not([href]):not([tabindex]) {
       column-count: 5;
     }
   }
+
+.btn-outline-success {
+    background-color: #BE1E2D;
+    outline: 0px;
+    border: 0px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    float: right;
+}
+
+.btn-outline-success:hover {
+    background-color: rgb(248, 82, 99);
+    border-color: rgb(119, 12, 22);
+}
+
+.carousel-item {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel.slide {
+    height: 75%;
+    -webkit-filter:
+        drop-shadow(8px 8px 10px black);
+    filter: 
+        drop-shadow(8px 8px 10px black); 
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.card {
+    -webkit-filter:
+    drop-shadow(4px 4px 5px black);
+    filter: 
+    drop-shadow(4px 4px 5px black); 
+    background-color: rgb(250, 249, 248);
+}
+
+cite {
+    color: #ffffff;
+    
+}
+
+.copyright {
+ text-align: right;
+ font-weight: bold;
+ color: #ffffff;
+ margin: auto 0;
+ font-size: 18pt;
+}
+
+.contactus {
+    color: #ffffff;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.card-header {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #333333
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 18pt;
+}
+
+.article {
+    line-height: 1.5rem;
+}
+a {
+    color: #333333;
+}
+
