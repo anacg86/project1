@@ -9,9 +9,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <!--<script type="text/javascript" src="./assets/scripts/userInput.js"></script>-->
+    <script type="text/javascript" src="assets/scripts/firebase.js"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
                                 <form>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="First name">
+                                            <input type="text" class="form-control" placeholder="First name" id="firstname">
                                         </div>
                                         <div class="col">
                                             <input type="text" class="form-control" placeholder="Last name">
@@ -69,8 +70,8 @@
                                             <label for="inputGender"></label>
                                             <select id="inputState" class="form-control">
                                                 <option selected>Choose your Gender...</option>
-                                                <option>Male</option>
-                                                <option>Female</option>
+                                                <option name="gridGender" id="gridGender1" value="Male">Male</option>
+                                                <option name="gridGender" id="gridGender2" value="Female">Female</option>
                                             </select>
                                         </div>
                                     </div>
@@ -95,28 +96,28 @@
                                     <br>
                                     <fieldset class="form-group">
                                         <div class="row">
-                                            <legend class="col-form-label col-sm-2 pt-0">Tipe of Exercise Plan</legend>
+                                            <legend class="col-form-label col-sm-2 pt-0">Type of Exercise Plan</legend>
                                             <div class="col-sm-10">
-                                                <div class="form-check">
+                                                <div class="form-check" id="form">
                                                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                                        value="option1" checked>
-                                                    <label class="form-check-label" for="gridRadios1">
+                                                        value="Gym" checked>
+                                                    <label class="form-check-label" for="gridRadios1" >
                                                         Gym
                                                     </label>
                                                 </div>
                                                 <br>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                                        value="option2">
-                                                    <label class="form-check-label" for="gridRadios2">
+                                                        value="Indoor">
+                                                    <label class="form-check-label" for="gridRadios2" id="indoor">
                                                         Indoor
                                                     </label>
                                                 </div>
                                                 <br>
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                                        value="option3">
-                                                    <label class="form-check-label" for="gridRadios3">
+                                                        value="Outdoor">
+                                                    <label class="form-check-label" for="gridRadios3" id="outdoor"> 
                                                         Outdoor
                                                     </label>
                                                 </div>
@@ -125,11 +126,11 @@
                                     </fieldset>
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">You agree terms and
-                                            conditions</label>
+                                        <label class="form-check-label" for="exampleCheck1">You agree to the Terms and
+                                            Conditions</label>
                                     </div>
                                     <a href="user-wl-plan.html">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
                                     </a>
                                 </form>
                             </p>

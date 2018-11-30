@@ -15,13 +15,29 @@ $(document).ready(function () {
     $('#submitBtn').click(function (e) {
         e.preventDefault();
         var selValue = $('input[name=gridRadios]:checked').val();
-        alert('Selected Workout is:' + selValue);
-            var name = $("#firstname").val().trim();
+        alert('Selected Workout is: ' + selValue);
+        var selGender = $("#inputState").val();
+        alert('Selected Gender is: ' + selGender);
+        var name = $("#firstname").val().trim();
             // Code for handling the push
-            debugger;
             database.ref().push({
+                name: name,
                 selValue: selValue,
+                selGender: selGender,
                 dateAdded: firebase.database.ServerValue.TIMESTAMP
             });
         });
+
+        // Firebase callback to bring back data
+     database.ref().on("child_added", function(childSnapshot) {
+
+        // Log everything that's coming out of snapshot
+        console.log(childSnapshot.val().name);
+        console.log(childSnapshot.val().selValue);
+        console.log(childSnapshot.val().selGender);
+        console.log(childSnapshot.val().dateAdded);
+        alert("Hi " + childSnapshot.val().name + "!" + " Your workout type is: " + childSnapshot.val().selValue);
+     })
+
+     
     })
