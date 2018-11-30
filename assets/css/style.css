@@ -130,3 +130,6 @@ a:hover {
     font-weight: bold;
 }
 
+.meal-plan-select {
+    width: 50%;
+}

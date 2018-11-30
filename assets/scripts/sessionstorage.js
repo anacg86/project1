@@ -1,4 +1,5 @@
 function saveToSessionStorage(key, value) {
+    //make the value a string 
     var stringifyValue = JSON.stringify(value);
     // Store in the session storage 
     sessionStorage.setItem(key, stringifyValue);
