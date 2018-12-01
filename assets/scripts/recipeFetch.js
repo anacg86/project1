@@ -1,5 +1,7 @@
 var mealPlans = ["breakfast", "lunch", "dinner"];
 
+var waist = userInfo["waist"];
+
 //object that shows the options in select2
 var foodPreferences = {
     fruits: ["apple", "banana", "pomegranate", "lemon", "orange", "grapes", "strawberry", "blueberries", "nectarine", "grapefruit", "kiwi", "pineapple", "mango"],
@@ -104,7 +106,7 @@ function processResponses(breakfastResponse, lunchResponse, dinnerResponse) {
 function processReponse(response, index) {
     var mealPlan = mealPlans[index];
     $(`#${mealPlan}Div`).empty();
-    var mealPlanDivider = $("<h1 class='card' id='property'>").text(mealPlan);
+    var mealPlanDivider = $("<h1 class='card' id='property2'>").text(mealPlan);
     $(`#${mealPlan}Div`).append(mealPlanDivider);
     var hits = response.hits;
     hits.map((hit) => {
@@ -119,10 +121,10 @@ function buildFoodInformation(hit, mealPlan) {
     var label = $("<h3>").text(hit.recipe.label);
     var image = $("<img>").attr("src", hit.recipe.image);
     var ingredients = $("<p>").text(hit.recipe.ingredientLines);
-    var caloriesLabel = $("<p>").text(hit.recipe.totalNutrients.ENERC_KCAL.label + " " + hit.recipe.totalNutrients.ENERC_KCAL.quantity +  " " + hit.recipe.totalNutrients.ENERC_KCAL.unit);
-    var fatLabel = $("<p>").text(hit.recipe.totalNutrients.FAT.label + " " + hit.recipe.totalNutrients.FAT.quantity + " " + hit.recipe.totalNutrients.FAT.unit);
-    var carbsLabel = $("<p>").text(hit.recipe.totalNutrients.CHOCDF.label + " " + hit.recipe.totalNutrients.CHOCDF.quantity   + " " + hit.recipe.totalNutrients.CHOCDF.unit);
-    var proteinLabel = $("<p>").text(hit.recipe.totalNutrients.PROCNT.label  + " " + hit.recipe.totalNutrients.PROCNT.quantity  + " " + hit.recipe.totalNutrients.PROCNT.unit);
+    var caloriesLabel = $("<p>").text(hit.recipe.totalNutrients.ENERC_KCAL.label + " " + Math.floor(hit.recipe.totalNutrients.ENERC_KCAL.quantity) +  " " + hit.recipe.totalNutrients.ENERC_KCAL.unit);
+    var fatLabel = $("<p>").text(hit.recipe.totalNutrients.FAT.label + " " + Math.floor(hit.recipe.totalNutrients.FAT.quantity) + " " + hit.recipe.totalNutrients.FAT.unit);
+    var carbsLabel = $("<p>").text(hit.recipe.totalNutrients.CHOCDF.label + " " + Math.floor(hit.recipe.totalNutrients.CHOCDF.quantity)   + " " + hit.recipe.totalNutrients.CHOCDF.unit);
+    var proteinLabel = $("<p>").text(hit.recipe.totalNutrients.PROCNT.label  + " " + Math.floor(hit.recipe.totalNutrients.PROCNT.quantity)  + " " + hit.recipe.totalNutrients.PROCNT.unit);
     
     recipeContainer.append(label, image, ingredients, caloriesLabel, fatLabel, carbsLabel, proteinLabel);
     $(`#${mealPlan}Div`).append(recipeContainer);
