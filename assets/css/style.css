@@ -52,7 +52,6 @@ body {
 }
 
 .carousel.slide {
-    height: 75%;
     -webkit-filter:
         drop-shadow(8px 8px 10px black);
     filter: 
@@ -132,4 +131,15 @@ a:hover {
 
 .meal-plan-select {
     width: 50%;
+}
+
+.property2 {
+    background-color: #BE1E2D;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    -webkit-filter: drop-shadow(4px 4px 5px black);
+    filter: drop-shadow(4px 4px 5px black);
+    border-radius: .25rem;
 }
