@@ -112,4 +112,24 @@ h2 {
 a {
     color: #333333;
 }
+a:visited {
+    color: #BE1E2D;
+}
+a:hover {
+    color: #BE1E2D;
+}
 
+.bg-primary {
+    background-color: #BE1E2D!important;
+}
+
+#property {
+    background-color: #BE1E2D;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.meal-plan-select {
+    width: 50%;
+}

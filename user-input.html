@@ -1,6 +1,5 @@
-<html lang="en">
-
 <head>
+   <html lang="en"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,6 +11,13 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <!--Link to cdn multiselect-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <!--<script type="text/javascript" src="./assets/scripts/userInput.js"></script>-->
+    <script src="assets/scripts/userInput.js"></script>
+    <script src="assets/scripts/recipeFetch.js"></script>
+    <script src="assets/scripts/sessionstorage.js"></script>
     <script type="text/javascript" src="assets/scripts/firebase.js"></script>
 </head>
 
@@ -20,7 +26,7 @@
         <a class="navbar-brand" href="index.html">
             <img class="logo" src="./assets/images/logo.png" alt="WL Diet Plan">
         </a>
-        <a href="your-input.html"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Start Now!</button></a>
+       
     </nav>
 
 
@@ -45,13 +51,13 @@
                         <h5 class="card-title"><br><b>Answer the following to get your personalized plan Today!</b><br></h5>
                         <p class="card-text">
                             <p class="article">
-                                <form>
+                                <form id="clientsForm">
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="First name" id="firstname">
+                                            <input type="text" class="form-control" placeholder="First name" name="name" id="firstname">
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Last name">
+                                            <input type="text" class="form-control" placeholder="Last name" name="lastName">
                                         </div>
                                     </div>
                                     <br>
@@ -64,12 +70,12 @@
                                     <br>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Age">
+                                            <input type="text" class="form-control" placeholder="Age" name="age">
                                         </div>
                                         <div class="col">
                                             <label for="inputGender"></label>
                                             <select id="inputState" class="form-control">
-                                                <option selected>Choose your Gender...</option>
+                                                <option name="gender" selected>Choose your Gender...</option>
                                                 <option name="gridGender" id="gridGender1" value="Male">Male</option>
                                                 <option name="gridGender" id="gridGender2" value="Female">Female</option>
                                             </select>
@@ -78,19 +84,25 @@
                                     <br>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Height - Meters">
+                                            <input type="number" name="height" class="form-control" placeholder="Height - Meters" min="0" max="2">
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Weight - Kilos">
+                                            <input type="number" name="weight" class="form-control" placeholder="Weight - Kilos">
                                         </div>
+                                        <div class="col">
+                                                <input type="number" name="desirable-weight" class="form-control" placeholder="Desirable Weight - Kilos">
+                                            </div>
                                     </div>
                                     <br>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Waist - Centimeters">
+                                            <input type="number" class="form-control" placeholder="Waist - Centimeters">
                                         </div>
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="Hip - Centimeters">
+                                            <input type="number" name="hip" class="form-control" placeholder="Hip - Centimeters">
+                                        </div>
+                                        <div class="col">
+                                            <input type="number" name="wrist" class="form-control" placeholder="Wrist - Centimeters">
                                         </div>
                                     </div>
                                     <br>
@@ -130,16 +142,17 @@
                                             Conditions</label>
                                     </div>
                                     <a href="user-wl-plan.html">
-                                        <button type="submit" class="btn btn-primary" id="submitBtn">Submit</button>
+                                        <button type="submit" class="btn btn-primary" id="submitBtn">Next</button>
                                     </a>
                                 </form>
                             </p>
                             <br>
-                            <h2>Not great: Beat the craving - Get your life back </h2>
+                            <div class="food-preferences-container">
+                                </div> 
+                                <br>
+                                <a href="user-wl-plan.html"><button class="btn btn-outline-success my-2 my-sm-0" id="calculate">Calculate my plan</button></a>
                             <br>
-                            <p class="article">
-                                Start now your WL Diet Plan!
-                            </p>
+                            
                     </div>
                 </div>
             </div>
@@ -165,6 +178,7 @@
         </div>
     </div>
 
+    
 </body>
 
 </html>
