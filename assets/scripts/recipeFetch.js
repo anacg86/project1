@@ -1,5 +1,5 @@
 var mealPlans = ["breakfast", "lunch", "dinner"];
-
+var waist = userInfo["waist"];
 //object that shows the options in select2
 var foodPreferences = {
     fruits: ["apple", "banana", "pomegranate", "lemon", "orange", "grapes", "strawberry", "blueberries", "nectarine", "grapefruit", "kiwi", "pineapple", "mango"],
@@ -104,7 +104,7 @@ function processResponses(breakfastResponse, lunchResponse, dinnerResponse) {
 function processReponse(response, index) {
     var mealPlan = mealPlans[index];
     $(`#${mealPlan}Div`).empty();
-    var mealPlanDivider = $("<h1 class='card' id='property'>").text(mealPlan);
+    var mealPlanDivider = $("<h1 class='card property2'>").text(mealPlan);
     $(`#${mealPlan}Div`).append(mealPlanDivider);
     var hits = response.hits;
     hits.map((hit) => {
