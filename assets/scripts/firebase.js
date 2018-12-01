@@ -8,14 +8,17 @@ var config = {
     storageBucket: "weightloss-c69df.appspot.com",
     messagingSenderId: "360811521364"
 };
+//initialize firebase
 firebase.initializeApp(config);
 var database = firebase.database();
 
+//wait until document is ready
 $(document).ready(function () {
+    //sends data to firebase database once the button is clicked
     $('#submitBtn').click(function (e) {
         e.preventDefault();
         var selValue = $('input[name=gridRadios]:checked').val();
-        console.log('Selected Workout is: ' + selValue);
+        console.log('Selected Workout is: ' + selValue); //makes sure data is selected correctly
         var selGender = $("#inputState").val();
         console.log('Selected Gender is: ' + selGender);
         var name = $("#firstname").val().trim();
