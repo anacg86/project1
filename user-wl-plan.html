@@ -70,8 +70,139 @@
                         <br>
 
                         <!--Gabriel-->
-                        <div class="charts">
+                        <div class="charts">                     
+                                <div class="row roco" id="IMCRow">                            
+                                    <div class="col-md-6" style="text-align: center;">
+                                        <div id="BMIchart" style="width:100%; height:150px;"></div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"><b>•</b></th>
+                                                    <th scope="col">Obesity classification</th>
+                                                    <th scope="col"><b>BMI Type</b></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><div class="color" style="background:#BC4B4B"></div></td>
+                                                    <th scope="row" >Emaciation</th>
+                                                    <td>&lt; 15</td>                                            
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FF8B61"></div></td>
+                                                    <th scope="row">Low Weight</th>
+                                                    <td>15.5 - 18.4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#8EEC8E"></div></td>
+                                                    <th scope="row">Normal Weight</th>
+                                                    <td>18.5 - 24.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FDFD62"></div></td>
+                                                    <th scope="row">Overweight</th>
+                                                    <td>25 - 29.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FFBC66"></div></td>
+                                                    <th scope="row">Obesity 1</th>
+                                                    <td>30 - 34.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FF6D37"></div></td>
+                                                    <th scope="row">Obesity 2</th>
+                                                    <td>35 - 39.9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FF5454"></div></td>
+                                                    <th scope="row">Morbid Obesity</th>
+                                                    <td>&gt; 40</td>
+                                                </tr>                                            
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row roco" id="bodyComplexRow">
+                                    <div class="col-md-6">
+                                        <div id="bodyComplexChartMen" style="width:100%; height:150px;" display="vertical-align: middle;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col"><b>•</b></th>
+                                                    <th scope="col">Body Complexion</th>
+                                                    <th scope="col"><b>Men</b></th>
+                                                    <th scope="col"><b>Women</b></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><div class="color" style="background:#3399FF"></div></td>
+                                                    <th scope="row" >Large</th>
+                                                    <td>&gt; 11</td>
+                                                    <td>&gt; 9.6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#66B2FF"></div></td>
+                                                    <th scope="row">Medium</th>
+                                                    <td>10.1 - 11</td>
+                                                    <td>9.6 - 10.4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#99CCFF"></div></td>
+                                                    <th scope="row">Small</th>
+                                                    <td>&lt; 10.1</td>
+                                                    <td>&lt; 9.6</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row roco" id="WHRRow">
+                                    <div class="col-md-6">
+                                        <div id="WHRChart" style="width:100%; height:150px;" display="vertical-align: middle;"></div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">•</th>
+                                                    <th scope="col">Waist-Hip Ratio</th>
+                                                    <th scope="col"><b>Men</b></th>
+                                                    <th scope="col"><b>Women</b></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><div class="color" style="background:#FF9999"></div></td>
+                                                    <th scope="row" >Apple-shaped</th>
+                                                    <td>&lt; 0.78</td>
+                                                    <td>&lt; 0.71</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#CCCCFF"></div></td>
+                                                    <th scope="row">Normal shape</th>
+                                                    <td>0.78 - 0.93</td>
+                                                    <td>0.71 - 0.84</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><div class="color" style="background:#CCFF99"></div></td>
+                                                    <th scope="row">Pear-shaped</th>
+                                                    <td>&gt; 0.93</td>
+                                                    <td>&gt; 0.84</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <br>
+                                </div>
                         </div>
+
                         <br>
 
                         <div class="recipe-container row">
@@ -85,137 +216,8 @@
                         </div>
                       
                         <br>
-                        <br>                        
-                        <div class="row roco" id="IMCRow">                            
-                            <div class="col-md-6" style="text-align: center;">
-                                <div id="BMIchart" style="width:100%; height:150px;"></div>
-                            </div> 
-                            <div class="col-md-6">
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"><b>•</b></th>
-                                            <th scope="col">Obesity classification</th>
-                                            <th scope="col"><b>BMI Type</b></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="color" style="background:#BC4B4B"></div></td>
-                                            <th scope="row" >Emaciation</th>
-                                            <td>&lt; 15</td>                                            
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#FF8B61"></div></td>
-                                            <th scope="row">Low Weight</th>
-                                            <td>15.5 - 18.4</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#8EEC8E"></div></td>
-                                            <th scope="row">Normal Weight</th>
-                                            <td>18.5 - 24.9</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#FDFD62"></div></td>
-                                            <th scope="row">Overweight</th>
-                                            <td>25 - 29.9</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#FFBC66"></div></td>
-                                            <th scope="row">Obesity 1</th>
-                                            <td>30 - 34.9</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#FF6D37"></div></td>
-                                            <th scope="row">Obesity 2</th>
-                                            <td>35 - 39.9</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#FF5454"></div></td>
-                                            <th scope="row">Morbid Obesity</th>
-                                            <td>&gt; 40</td>
-                                        </tr>                                            
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                         <br>
-                        <div class="row roco" id="bodyComplexRow">
-                            <div class="col-md-6">
-                                <div id="bodyComplexChartMen" style="width:100%; height:150px;" display="vertical-align: middle;"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"><b>•</b></th>
-                                            <th scope="col">Body Complexion</th>
-                                            <th scope="col"><b>Men</b></th>
-                                            <th scope="col"><b>Women</b></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="color" style="background:#3399FF"></div></td>
-                                            <th scope="row" >Large</th>
-                                            <td>&gt; 11</td>
-                                            <td>&gt; 9.6</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#66B2FF"></div></td>
-                                            <th scope="row">Medium</th>
-                                            <td>10.1 - 11</td>
-                                            <td>9.6 - 10.4</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#99CCFF"></div></td>
-                                            <th scope="row">Small</th>
-                                            <td>&lt; 10.1</td>
-                                            <td>&lt; 9.6</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row roco" id="WHRRow">
-                            <div class="col-md-6">
-                                <div id="WHRChart" style="width:100%; height:150px;" display="vertical-align: middle;"></div>
-                            </div>
-                            <div class="col-md-6">
-                                <table class="table table-sm">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">•</th>
-                                            <th scope="col">Waist-Hip Ratio</th>
-                                            <th scope="col"><b>Men</b></th>
-                                            <th scope="col"><b>Women</b></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><div class="color" style="background:#FF9999"></div></td>
-                                            <th scope="row" >Apple-shaped</th>
-                                            <td>&lt; 0.78</td>
-                                            <td>&lt; 0.71</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#CCCCFF"></div></td>
-                                            <th scope="row">Normal shape</th>
-                                            <td>0.78 - 0.93</td>
-                                            <td>0.71 - 0.84</td>
-                                        </tr>
-                                        <tr>
-                                            <td><div class="color" style="background:#CCFF99"></div></td>
-                                            <th scope="row">Pear-shaped</th>
-                                            <td>&gt; 0.93</td>
-                                            <td>&gt; 0.84</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <br>
-                        </div>
+                        
                         <h1>Video Workouts</h1>
                         <!--Luis-->
                         <div id="video" class="videos"></div>
