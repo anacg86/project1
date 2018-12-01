@@ -21,7 +21,7 @@ $(document).ready(function () {
         console.log('Selected Workout is: ' + selValue); //makes sure data is selected correctly
         var selGender = $("#inputState").val();
         console.log('Selected Gender is: ' + selGender);
-        var name = $("#firstname").val().trim();
+        var name = $("#firstname").val();
             // Code for handling the push
             database.ref().push({
                 name: name,
