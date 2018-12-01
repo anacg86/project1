@@ -13,10 +13,12 @@
     <!--Link to cdn multiselect-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <!--link to javascript-->
     <script src="assets/scripts/user-wl-plan.js"></script>
     <script src="assets/scripts/recipeFetch.js"></script>
     <script src="assets/scripts/sessionstorage.js"></script>
+    <script src="assets/scripts/youtube.js"></script>
 </head>
 
 <body>
@@ -25,9 +27,6 @@
             <img class="logo" src="./assets/images/logo.png" alt="WL Diet Plan">
         </a>
     </nav>
-
-
-
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -47,13 +46,13 @@
                     <div class="card-body">
                         <h5 class="card-title"><br><b>Here is your WL Diet Plan + Exercise Plan!</b><br></h5>
                         <br>
-                            
+
                         <!--Gabriel-->
-                            <div class="charts">
-                            </div>
-                            <br>
-                        
-                            <div class="recipe-container row">
+                        <div class="charts">
+                        </div>
+                        <br>
+
+                        <div class="recipe-container row">
                             <!--Ana-->
                             <!--div for breakfast response-->
                             <div class="col-4" id="breakfastDiv"> </div>
@@ -62,12 +61,12 @@
                             <!--div for dinner response-->
                             <div class="col-4" id="dinnerDiv"> </div>
                         </div>
-                        
-                        <br>
-                        <!--Luis-->
-                        <div class="videos">
 
-                        </div>
+                        <br>
+                        <h1>Video Workouts</h1>
+                        <!--Luis-->
+                        <div id="video" class="videos"></div>
+                        <main></main>
                     </div>
                 </div>
             </div>
@@ -79,9 +78,6 @@
             </div>
         </div>
     </div>
-
-
-
 
     <div class="navbar navbar-dark bg-dark navbar-fixed-bottom">
         <div class="container">
@@ -95,9 +91,6 @@
             </div>
         </div>
     </div>
-
-
-
 </body>
 
 </html>
