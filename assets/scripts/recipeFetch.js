@@ -1,5 +1,5 @@
 var mealPlans = ["breakfast", "lunch", "dinner"];
-var waist = userInfo["waist"];
+
 //object that shows the options in select2
 var foodPreferences = {
     fruits: ["apple", "banana", "pomegranate", "lemon", "orange", "grapes", "strawberry", "blueberries", "nectarine", "grapefruit", "kiwi", "pineapple", "mango"],
