@@ -9,14 +9,17 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-database.ref().on("child_added", function (childSnapshot) {
+//calls only the LAST user to sign up to show the videos
+database.ref().orderByKey().limitToLast(1).on("child_added", function (childSnapshot) {
     $(document).ready(function () {
+        //call for the Youtube API
         $.ajax({
             url: "https://www.googleapis.com/youtube/v3/search",
             method: "GET",
             data: {
                 part: 'snippet',
                 maxResults: 7,
+                //search based on the Gender and Type of Workout the user selected
                 q: childSnapshot.val().selGender + " " + childSnapshot.val().selValue + " exercise",
                 type: 'video',
                 key: 'AIzaSyC_54O2ZQp7CNs5wDhwMKlqG5oOSmj7MK4'
@@ -29,10 +32,9 @@ database.ref().on("child_added", function (childSnapshot) {
                 $('#video').append(`
                       <iframe width="600" height="350" src="https://www.youtube.com/embed/${response.items[0].id.videoId}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                   `);
-                //show the next 6 videos
+                //show the 7 videos (for each day of the week) with thumbnail image, title and description
                 $.each(response.items, function (i, item) {
-                    if (i === 0)
-                        return;
+                    
 
                     var thumb = item.snippet.thumbnails.medium.url;
                     var title = item.snippet.title;
@@ -50,7 +52,7 @@ database.ref().on("child_added", function (childSnapshot) {
                         </article>
                     `);
                 });
-
+                //when the video is clicked, reloads the player frame to play the selected video.
                 $('main').on('click', 'article', function () {
                     var id = $(this).attr('data-key');
                     mainVid(id);
