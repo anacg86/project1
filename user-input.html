@@ -17,6 +17,7 @@
     <script src="assets/scripts/userInput.js"></script>
     <script src="assets/scripts/recipeFetch.js"></script>
     <script src="assets/scripts/sessionstorage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
     <script src="assets/scripts/firebase.js"></script>
 </head>
 
@@ -53,7 +54,7 @@
                                 <form id="clientsForm">
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="text" class="form-control" placeholder="First name" name="name">
+                                            <input type="text" class="form-control" placeholder="First name" name="name" id="firstname">
                                         </div>
                                         <div class="col">
                                             <input type="text" class="form-control" placeholder="Last name" name="lastName">
@@ -95,7 +96,7 @@
                                     <br>
                                     <div class="form-row">
                                         <div class="col">
-                                            <input type="number" class="form-control" placeholder="Waist - Centimeters">
+                                            <input type="number" class="form-control" name="waist" placeholder="Waist - Centimeters">
                                         </div>
                                         <div class="col">
                                             <input type="number" name="hip" class="form-control" placeholder="Hip - Centimeters">
