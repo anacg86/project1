@@ -4,4 +4,4 @@ Web App tool, for users that want to lose weight but doesn’t count with time o
 
 https://paulinagomez.github.io/project1/.
 
-![WLPlan](/FitConnection.jpg)
+![WLPlan](/wlplan.jpg)
